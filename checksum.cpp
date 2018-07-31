@@ -74,5 +74,5 @@ unsigned int checksum::archivo(int n)
 
 bool checksum::getBit(char byte, int position) // position in range 0-7
 {
-    return (byte >> position) & 0x1;
+    return (byte >> (8-position-1)) & 0x1;
 }
